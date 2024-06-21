@@ -10,6 +10,8 @@ make clean
 git pull -f
 make archiveDLL
 cd /programs/Encryption
+rm -rf Libs
+rm -rf Headers
 mkdir -p Libs
 cp /home/SecuEyesDecoder/Outputs/DOT_A/libjsonDecoder.a /programs/Encryption/Libs/libjsonDecoder.a && \
 cp -pR /home/SecuEyesDecoder/Headers  /programs/Encryption
