@@ -1,0 +1,23 @@
+# /**
+# * Setting of containers for developing html web pages.
+# *
+# * @author Nick
+# * @date 14/11/2022
+# * @detail Please use compose to execute the yaml file
+# */
+version: "3.8"
+
+services:
+  golang1_19:
+    build: ./GoLang1_19
+    container_name: golang1_19
+    working_dir: /programs
+    restart: unless-stopped
+    volumes:
+      - "./workspace:/programs"
+    networks:
+      - dev
+    command: tail -f /dev/null
+
+networks:
+  dev:
